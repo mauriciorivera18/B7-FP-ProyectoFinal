@@ -1,1 +1,17 @@
+#include <stdio.h>
+int encontrarElementoMenor(int arreglo[], int tam)
+{
+	int menorNumero, contador=0;
+	menorNumero = arreglo[contador];
+	while (contador<tam)
+	{
+		if (arreglo[contador]< menorNumero)
+		{
+			menorNumero= arreglo[contador];
+		}
+		contador++;
+	}
+	printf("El numero menor es: %d\n",menorNumero);
+	return 0;
+}
 
