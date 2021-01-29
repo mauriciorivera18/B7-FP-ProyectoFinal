@@ -1,1 +1,22 @@
+void copiardatos2() 
+{ 
+ printf("\n\n Sus numeros estarian ordenados de esta forma: \n");  printf(" "); 
+ for(i=0;i<numeros_a_ordenar;i++) 
+ { 
+ printf("%d ", vector_numeros[i]); 
+ } 
+} 
+ FILE *archivo20;
+ char escribir; copiardatos2(); 
+ archivo20 = fopen("numeros_ordenados.csv", "wb");  if (archivo20 != NULL) { 
+ printf("\n\n\n NUMEROS ORDENADOS Y GUARDADOS EN UN NUEVO  ARCHIVO"); 
+ fprintf(archivo20, escribir); 
+ fprintf(archivo20, "%s", "si se pudo"); 
+ fclose(archivo20); 
+} 
+ fclose(archivo); 
+ copiardatos2(); 
+} 
+ return 0; 
+} 
 
