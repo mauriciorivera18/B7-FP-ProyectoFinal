@@ -1,1 +1,22 @@
+#include <stdio.h>
+
+void encontrar( int arr1[],int l1, int arr2[],int l2,int res[],int* lres){
+
+int i,j,k,total,existe;
+
+total = 0;
+
+for (i=0;i< l1;i++){
+        for (j=0; j< l2 ; j++) {
+                if (arr1[i] == arr2[j]) {
+                        existe = 0;
+                        for (k=0 ; k < total ;k++){
+                                if ( arr1[i] == res[k] ) { existe = 1; };
+                        }
+                        if (!existe) { res[total] = arr1[i]; total++; };
+                }
+        }
+}
+*lres = total ;
+}
 
