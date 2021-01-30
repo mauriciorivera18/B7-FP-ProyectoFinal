@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+FILE *archivo;
+char caracteres[10];
+archivo = fopen("datos.csv", "r");
+if (archivo != NULL) {
+     		printf("El archivo se abrió correctamente.");
+    		printf("\nContenido del archivo:\n");
+     		while (feof(archivo) == 0) {
+     			fgets (caracteres, 10, archivo);
+    			printf("%s", caracteres);
+}
+ 	char num_ord;
+num_ord=7;
+ 	char numeros_v[num_ord];
+ 	char i, j, k=1;
+ 	for(i=0;i<num_ord;i++)
+{
+ 		printf(" %d numero: ", &k);
+ 		scanf("%d", &j);
+ 		numeros_v[i] = j;
+ 		k++;
+ 	}
+ 	char x, y;
+ 	for(i=0;i<num_ord;i++)
+ 	{
+ 		for(j=i+1;j<num_ord;j++)
+ 		{
+ 			x = numeros_v[i] - numeros_v[j];
+ 			if(x>0)
+ 			{
+ 				y = numeros_v[j];
+ 				numeros_v[j] = numeros_v[i];
+ 				numeros_v[i] = y;
+ 			}
+ 		}
+ 	}
+ 	void copiardatos2()
+{
+ 		printf("Los numeros en orden son: \n");
+ 		for(i=0;i<num_ord;i++);
+ 		{
+ 			printf("%d ", numeros_v[i]);
+ 		}
+}
+ 	FILE *archivo20;
+ 	char escribir;
+copiardatos2();
+ 	archivo20 = fopen("datos2.csv", "wb");  if (archivo20 != NULL) {
+ 	printf("\n\n\n NUMEROS ORDENADOS Y GUARDADOS EN UN NUEVO  ARCHIVO");
+ 	fprintf(archivo20, escribir);
+ 	fprintf(archivo20, "%s", "si se pudo");
+ 	fclose(archivo20);
+}
+ 	fclose(archivo);
+ 	copiardatos2();
+}else{
+printf("El archivo no existe, o no se encuentra en el directorio");
+
+}
+ return 0;
+}
+
